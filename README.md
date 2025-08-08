@@ -1,11 +1,7 @@
 > 추후 수정 예정
 
 <div align="center">
-
-# PromtPlace FE
-
-**UMC 8th**
-
+React+TypeScript
 </div>
 <br>
 
