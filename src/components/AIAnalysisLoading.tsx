@@ -20,7 +20,7 @@ const AIAnalysisLoading: React.FC<AIAnalysisLoadingProps> = ({ userName, onCompl
   ];
 
   useEffect(() => {
-    const totalDuration = 5 * 60 * 1000; // 5분
+    const totalDuration = 5 * 1000; // 5초
     const stageInterval = totalDuration / analysisStages.length;
     const progressInterval = 100; // 100ms마다 진행률 업데이트
 
@@ -122,7 +122,7 @@ const AIAnalysisLoading: React.FC<AIAnalysisLoadingProps> = ({ userName, onCompl
         {/* 예상 시간 */}
         <div className="text-center">
           <p className="text-xs text-gray-500">
-            정확한 분석을 위해 약 5분 정도 소요됩니다
+            정확한 분석을 위해 잠깐만 기다려주세요
           </p>
           <p className="text-xs text-green-600 mt-1">
             💖 행운의 네잎클로버가 함께하고 있어요
