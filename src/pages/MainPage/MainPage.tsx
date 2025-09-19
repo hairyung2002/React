@@ -15,19 +15,42 @@ const MainPage = () => {
     history,
     generateFortune,
     clearHistory,
-    resetFortune
+    resetFortune,
+    setCurrentFortune
   } = useFortuneGenerator();
 
   const handleGenerateFortune = async (name: string, birthdate: string) => {
+    // 먼저 오늘 같은 정보로 이미 운세를 봤는지 확인
+    const today = new Date().toISOString().split('T')[0];
+    const existingFortune = history.find(h => 
+      h.name === name.trim() && 
+      h.birthdate === birthdate && 
+      h.date === today
+    );
+
+    if (existingFortune) {
+      // 이미 오늘 운세를 봤다면 즉시 결과 표시
+      setCurrentFortune({
+        fortune: existingFortune.fortune,
+        score: existingFortune.score,
+        luckyItems: existingFortune.luckyItems,
+        date: existingFortune.date
+      });
+      return existingFortune;
+    }
+
+    // 새로운 운세라면 AI 분석 화면 표시
     setCurrentUserName(name);
     setIsAIAnalyzing(true);
-    // AI 분석이 시작되면 임시 데이터를 반환하고, 실제 운세는 나중에 생성
-    return generateFortune(name, birthdate);
+    
+    // 실제 운세 생성 (백그라운드에서)
+    const fortuneData = await generateFortune(name, birthdate);
+    return fortuneData;
   };
 
   const handleAIAnalysisComplete = async () => {
     setIsAIAnalyzing(false);
-    // AI 분석이 완료되면 실제 운세 데이터를 표시
+    // AI 분석이 완료되면 이미 생성된 운세 데이터가 표시됨
   };
 
   const handleReset = () => {
@@ -66,12 +89,12 @@ const MainPage = () => {
           <div className="flex items-center justify-center mb-3">
             <img src="/icons/four-leaf-clover.svg" alt="네잎클로버" className="w-8 h-8 mr-2" />
             <h1 className="text-2xl font-bold text-gray-800">
-              <span className="text-green-600">동국대학교</span> 행운의 운세
+              <span className="text-green-600">동국대학교 Frontier</span> 행운의 운세
             </h1>
             <img src="/icons/university.svg" alt="동국대학교" className="w-8 h-8 ml-2" />
           </div>
           <p className="text-gray-600 text-sm mb-3">
-            🍀 QR코드로 연결된 행운의 네잎클로버 운세 서비스
+            🍀 네잎클로버를 구매한 당신에게 찾아온 행운!
           </p>
           <div className="inline-flex items-center px-3 py-1 bg-green-100 rounded-full">
             <span className="text-green-600 font-medium text-sm">
@@ -116,9 +139,9 @@ const MainPage = () => {
         <footer className="text-center mt-8 text-gray-500 pb-4">
           <div className="flex items-center justify-center mb-2">
             <img src="/icons/university.svg" alt="동국대학교" className="w-4 h-4 mr-1" />
-            <p className="text-sm">동국대학교 운세 서비스</p>
+            <p className="text-sm">동국대학교 Frontier "연매출3조"</p>
           </div>
-          <p className="text-xs">매일 새로운 운세로 하루를 시작하세요!</p>
+          <p className="text-xs">새로운 운세로 시작하는 하루</p>
         </footer>
       </div>
     </div>

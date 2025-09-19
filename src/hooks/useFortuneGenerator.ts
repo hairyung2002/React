@@ -129,6 +129,7 @@ export const useFortuneGenerator = () => {
     history,
     generateFortune,
     clearHistory,
-    resetFortune
+    resetFortune,
+    setCurrentFortune
   };
 };
