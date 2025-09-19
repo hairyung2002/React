@@ -17,14 +17,9 @@ const FortuneHistoryComponent: React.FC<FortuneHistoryProps> = ({ history, onCle
     return 'text-gray-600 bg-gray-100';
   };
 
-  const getStars = (score: number) => {
-    const starCount = Math.floor(score / 20);
-    return '⭐'.repeat(Math.max(1, starCount));
-  };
-
   return (
     <div className="w-full max-w-sm mx-auto mt-6 px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-4 border-2 border-orange-100">
+      <div className="bg-white rounded-2xl shadow-lg p-4 border-2 border-green-100">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center">
             <img src="/icons/history-book.svg" alt="히스토리" className="w-5 h-5 mr-2" />
