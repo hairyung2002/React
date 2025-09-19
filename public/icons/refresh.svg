@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 화살표 원형 -->
+  <circle cx="24" cy="24" r="20" fill="#FF6B35" opacity="0.1"/>
+  <circle cx="24" cy="24" r="16" fill="#FF6B35" opacity="0.2"/>
+  <circle cx="24" cy="24" r="12" fill="#FF6B35"/>
+  
+  <!-- 회전 화살표 -->
+  <path d="M24 12 C30 12 35 17 35 24 C35 31 30 36 24 36 C18 36 13 31 13 24 C13 20 15 16.5 18 14" 
+        stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- 화살표 머리 -->
+  <polygon points="15,12 18,14 18,17" fill="#FFFFFF"/>
+  
+  <!-- 중앙점 -->
+  <circle cx="24" cy="24" r="2" fill="#FFFFFF"/>
+</svg>

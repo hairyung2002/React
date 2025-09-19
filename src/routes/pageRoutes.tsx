@@ -9,7 +9,10 @@ export const publicRoutes: RouteObject[] = [
     element: <HomeLayout />,
     errorElement: <lazyRoutes.NotFoundPage />,
     children: [
-      
+      {
+        index: true,
+        element: <lazyRoutes.MainPage />,
+      },
     ],
   },
 ];
@@ -19,7 +22,14 @@ export const protectedRoutes: RouteObject[] = [
     path: '/mypage',
     element: <ProtectedLayout />,
     children: [
-      
+      {
+        index: true,
+        element: <lazyRoutes.MyInfoPage />,
+      },
+      {
+        path: 'profile',
+        element: <lazyRoutes.ProfilePage />,
+      },
     ],
   },
 ];

@@ -1,0 +1,40 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- AI 뇌 모양 -->
+  <path d="M24 8 C32 8 38 14 38 22 C38 26 36 29 33 31 C35 33 36 36 36 39 C36 42 33 44 30 44 L18 44 C15 44 12 42 12 39 C12 36 13 33 15 31 C12 29 10 26 10 22 C10 14 16 8 24 8 Z" fill="#6366F1"/>
+  
+  <!-- AI 회로 패턴 -->
+  <g stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.8">
+    <circle cx="20" cy="18" r="2"/>
+    <circle cx="28" cy="18" r="2"/>
+    <circle cx="24" cy="25" r="2"/>
+    <circle cx="18" cy="32" r="2"/>
+    <circle cx="30" cy="32" r="2"/>
+    
+    <!-- 연결선 -->
+    <path d="M20 20 L24 23"/>
+    <path d="M28 20 L24 23"/>
+    <path d="M24 27 L18 30"/>
+    <path d="M24 27 L30 30"/>
+    <path d="M22 18 L26 18"/>
+  </g>
+  
+  <!-- 중앙 코어 -->
+  <circle cx="24" cy="25" r="3" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="24" cy="25" r="1.5" fill="#6366F1"/>
+  
+  <!-- 반짝임 효과 -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <circle cx="16" cy="15" r="1"/>
+    <circle cx="32" cy="15" r="1"/>
+    <circle cx="15" cy="28" r="1"/>
+    <circle cx="33" cy="28" r="1"/>
+  </g>
+  
+  <!-- 데이터 흐름 표현 -->
+  <g fill="#8B5CF6" opacity="0.4">
+    <rect x="10" y="12" width="4" height="1" rx="0.5"/>
+    <rect x="34" y="12" width="4" height="1" rx="0.5"/>
+    <rect x="10" y="35" width="4" height="1" rx="0.5"/>
+    <rect x="34" y="35" width="4" height="1" rx="0.5"/>
+  </g>
+</svg>

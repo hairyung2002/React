@@ -1,0 +1,50 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- QR 코드 프레임 -->
+  <rect x="4" y="4" width="40" height="40" rx="4" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+  
+  <!-- QR 코드 패턴 -->
+  <!-- 왼쪽 상단 큰 사각형 -->
+  <rect x="6" y="6" width="8" height="8" fill="#FFFFFF"/>
+  <rect x="8" y="8" width="4" height="4" fill="#1F2937"/>
+  
+  <!-- 오른쪽 상단 큰 사각형 -->
+  <rect x="34" y="6" width="8" height="8" fill="#FFFFFF"/>
+  <rect x="36" y="8" width="4" height="4" fill="#1F2937"/>
+  
+  <!-- 왼쪽 하단 큰 사각형 -->
+  <rect x="6" y="34" width="8" height="8" fill="#FFFFFF"/>
+  <rect x="8" y="36" width="4" height="4" fill="#1F2937"/>
+  
+  <!-- 중간 패턴들 -->
+  <g fill="#FFFFFF">
+    <rect x="18" y="6" width="2" height="2"/>
+    <rect x="22" y="6" width="2" height="2"/>
+    <rect x="26" y="6" width="2" height="2"/>
+    <rect x="18" y="10" width="2" height="2"/>
+    <rect x="26" y="10" width="2" height="2"/>
+    <rect x="6" y="18" width="2" height="2"/>
+    <rect x="10" y="18" width="2" height="2"/>
+    <rect x="18" y="18" width="2" height="2"/>
+    <rect x="22" y="18" width="2" height="2"/>
+    <rect x="26" y="18" width="2" height="2"/>
+    <rect x="34" y="18" width="2" height="2"/>
+    <rect x="38" y="18" width="2" height="2"/>
+    <rect x="18" y="22" width="2" height="2"/>
+    <rect x="22" y="22" width="2" height="2"/>
+    <rect x="26" y="26" width="2" height="2"/>
+    <rect x="18" y="34" width="2" height="2"/>
+    <rect x="22" y="34" width="2" height="2"/>
+    <rect x="26" y="34" width="2" height="2"/>
+    <rect x="34" y="34" width="2" height="2"/>
+    <rect x="38" y="34" width="2" height="2"/>
+  </g>
+  
+  <!-- 작은 네잎클로버 중앙에 -->
+  <g transform="translate(24, 24) scale(0.3)">
+    <path d="M0,-8 C-4,-12 -4,-16 0,-12 C4,-16 4,-12 0,-8" fill="#22C55E"/>
+    <path d="M8,0 C12,-4 16,-4 12,0 C16,4 12,4 8,0" fill="#22C55E"/>
+    <path d="M0,8 C4,12 4,16 0,12 C-4,16 -4,12 0,8" fill="#22C55E"/>
+    <path d="M-8,0 C-12,4 -16,4 -12,0 C-16,-4 -12,-4 -8,0" fill="#22C55E"/>
+    <circle r="2" fill="#15803D"/>
+  </g>
+</svg>
